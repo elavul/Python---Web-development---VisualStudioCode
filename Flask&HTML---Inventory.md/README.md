@@ -8,7 +8,8 @@ Copy & paste the 2 files attached to this  repository.
 
 ![image](https://github.com/user-attachments/assets/f8ca4f4f-2c10-4f44-ba47-3eebaedd2881)
 And how it looks like if we add things:
-![image](https://github.com/user-attachments/assets/f0022149-ace3-4eb6-a89c-2a8369061aa2)
+![image](https://github.com/user-attachments/assets/08b18450-a25a-4bc7-a994-8502f72db900)
+
 
 
 
