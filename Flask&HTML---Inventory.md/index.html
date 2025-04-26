@@ -1,0 +1,52 @@
+HTML template:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management</title>
+    <style>
+        table {
+            border: 1px solid black;
+            border-collapse: collapse; /* Optional: Makes the borders collapse into one */
+        }
+        th, td {
+            padding: 10px; /* Adds space around the text inside each cell */
+            text-align: left; /* Align text to the left */
+        }
+    </style>
+</head>
+<body>
+    <h1>Inventory Management System</h1>
+    
+    <h2>Current Inventory</h2>
+    <table>
+        <tr>
+            <th>Item Name</th>
+            <th>Quantity</th>
+        </tr>
+        {% for item in inventory %}
+        <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.quantity }}</td>
+        </tr>
+        {% else %}
+        <tr>
+            <td colspan="2">No items in the inventory</td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+    <h2>Add New Item</h2>
+    <form action="/add" method="POST">
+        <label for="item_name">Item Name: </label>
+        <input type="text" id="item_name" name="item_name" required><br><br>
+        
+        <label for="item_quantity">Quantity: </label>
+        <input type="number" id="item_quantity" name="item_quantity" required><br><br>
+        
+        <input type="submit" value="Add Item">
+    </form>
+</body>
+</html>
